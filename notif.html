@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Makan 5 Menit, Menang 5 Miliar</title>
+
+    <style media="screen, print">
+        body {
+            font-family: "Helvetica", "Arial", sans-serif;
+            margin: 0 auto;
+            padding: 0;
+            width: 1000px;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        .container {
+            padding: 20px;
+            outline: 1px solid black;
+        }
+
+        #top {
+            background: black;
+            color: white;
+            font-weight: bold;
+            line-height: 180%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #logo {
+            float: left;
+            width: 500px;
+            text-align: center;
+        }
+
+        #info {
+            /*float: left;*/
+            /*width: 480px;*/
+            /*outline: 1px dashed red;*/
+        }
+
+        #info > span {
+            float: right;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        #box {
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+        }
+
+        #box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #box ul li {
+            margin-bottom: 10px;
+            width: 50%;
+        }
+
+        #box li span {
+            display: block;
+        }
+
+        #qrcode {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #info p {
+            line-height: 36px;
+            text-transform: uppercase;;
+        }
+
+        #info strong {
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        #bottom-left, #bottom-right {
+            width: 46%;
+            float: left;
+            padding: 20px;
+        }
+
+        .bottom-inner {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        h3 {
+            background: black;
+            color: white;
+            line-height: 200%;
+            padding: 0px 20px;
+            margin: 0;
+        }
+
+        #info ul {
+            list-style-type: none;
+        }
+
+        #rinci {
+            border: 1px solid #EEE;
+            width: 100%;
+        }
+
+        #rinci td {
+            border: 1px solid #EEE;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<table width="100%">
+    <tr>
+        <td>
+            <ul style="list-style-type: none;">
+                <li>No Pendaftaran : <strong>{{nodaftar}}</strong></li>
+                <li>No KTP : <strong>{{noktp}}</strong></li>
+                <li>Nama : <strong>{{nama}}</strong></li>
+                <li>Lokasi : <strong>{{lokasi}}</strong></li>
+                <li>Tanggal : <strong>{{tanggal}}</strong></li>
+                <li>Waktu : <strong>{{jam}}</strong></li>
+                <li>
+                    <stong>PASTIKAN NAMA ANDA, LOKASI, SERTA WAKTU LOMBA SUDAH SESUAI SEBELUM MELAKUKAN TRANSFER</stong>
+                </li>
+                <li><h1>Biaya Pendaftaran : Rp.<strong>157.500</strong></h1></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table id="rinci" style="border: 1px solid #EEE;width: 100%;" width="100%" border="1" cellpadding="5"
+                   cellspacing="3">
+                <tr>
+                    <td>Keterangan</td>
+                    <td>Nominal</td>
+                </tr>
+                <tr>
+                    <td>
+                        Paket Balap Makan Ayam
+                    </td>
+                    <td style="text-align: right;">
+                        Rp. 150.000
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Biaya Debit Channel
+                    </td>
+                    <td style="text-align: right;">
+                        Rp. 5.000
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Biaya Admin
+                    </td>
+                    <td style="text-align: right;">
+                        Rp. 2.500
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total Bayar
+                    </td>
+                    <td style="text-align: right;">
+                        Rp.<strong>157.500</strong>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h1>Cara Melakukan Pembayaran Via ATM / Internet Banking</h1>
+            <ul>
+                <li>Masukkan PIN</li>
+                <li>Pilih "TRANSAKSI LAINNYA"</li>
+                <li>Pilih "TRANSFER"</li>
+                <li>Pilih "KE REK BANK LAIN"</li>
+                <li>Masukkan Kode Bank Permata (013) kemudian tekan "Benar"</li>
+                <li>Masukkan Jumlah pembayaran sesuai dengan yang ditagihkan (Jumlah yang ditransfer harus sama persis
+                    tidak boleh lebih dan kurang).
+                </li>
+                <li>Jumlah nominal yang tidak sesuai dengan tagihan akan menyebabkan transaksi gagal.</li>
+                <li>Masukkan Nomor Rekening tujuan dengan menggunakan Nomor Kode Pembayaran. <strong>{{kodebayar}}</strong> lalu tekan
+                    "Benar"
+                </li>
+                <li>Muncul Layar Konfirmasi Transfer yang berisi nomor rekening tujuan Bank Permata dan Nama beserta
+                    jumlah yang dibayar.
+                </li>
+                <li><strong>Perhatikan bahwa nama yang muncul adalah nama peserta lomba, bukan nama yang lain</strong>, jika sudah benar, Tekan "Benar".
+                </li>
+                <li>Selesai.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+                <p>Keterangan :</p>
+                <p>Pembayaran hanya bisa dilakukan di ATM atau Internet Banking yang terhubung ke jaringan ATM Bersama, Prima atau ALTO.</p>
+                <p>Pelanggan dapat melakukan transfer melalui ATM ke bank-bank yang telah di tentukan dengan <strong>batas maksimal waktu transfer 3 jam.</strong> </p>
+                <p>Jika sudah melawati waktu 3 jam, diharapkan pelanggan mendaftar ulang untuk mendapatkan no pendaftaran baru.</p>
+                <p>Daftar Bank untuk Pembayaran Melalui ATM : BCA, MANDIRI, BNI, BII, BRI, DANAMON, PERMATA, MEGA, BUKOPIN, CIMB Niaga, PANIN, dan lain lain.</p>
+                <p>
+                    Bila dalam waktu 1x24 jam , tdk mendapatkan tiket setelah konfirmasi pembayaran. Maka calon peserta harus mengirimkan nomor registrasi, foto identifikasi dan foto bukti bayar ke alamat : payment@menang5miliar.com
+                </p>
+                <p>
+                    Setelah identifikasi maka h+3 akan dilakukan transfer ke bank yang bersangkutan setelah ada konfirmasi dari pihak penyelengara
+                </p>
+                <p>
+                    Biaya transfer balik akan dibebankan kepada calon peserta sebesar biaya SKN untuk bank tujuan.
+                </p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

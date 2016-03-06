@@ -67,6 +67,8 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 header("Pragma: no-cache"); //HTTP 1.0
 
 
+date_default_timezone_set("Asia/Jakarta");
+
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
 /*

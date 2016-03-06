@@ -1,0 +1,11 @@
+branch-defaults:
+  master:
+    environment: doku-kfc
+    group_suffix: null
+global:
+  application_name: doku
+  default_ec2_keyname: ainul
+  default_platform: PHP 5.6
+  default_region: ap-southeast-1
+  profile: eb-cli
+  sc: git
